@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiCrud5834249.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+            <Image
+            Source="dotnet_bot.png"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Entry x:Name="EntrX1" Placeholder="Digite X1"/>
+            <Entry x:Name="EntrX2" Placeholder="Digite X2"/>
+            <Entry x:Name="EntrY1" Placeholder="Digite Y1"/>
+            <Entry x:Name="EntrY2" Placeholder="Digite Y2"/>
+            <Label x:Name="labelDistancia" />
+
+            <Button
+            x:Name="CalcularBtn"
+            Text="Click me" 
+            Clicked="CalcularBtn_Clicked"
+            HorizontalOptions="Center" />
+
+            <ListView x:Name="listview" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listview_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <VerticalStackLayout Padding="5">
+                                <Label Text="{Binding X1}" FontSize="17" FontAttributes="Bold"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding X2}"/>
+                                    <Label Grid.Column="2" Text="{Binding Y1}"/>
+                                    <Label Grid.Column="3" Text="{Binding Y2}"/>
+                                    <Label Grid.Column="5" Text="{Binding Distanciaa}" FontAttributes="Bold"/>
+                                </Grid>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
