@@ -17,7 +17,7 @@
             <Entry x:Name="EntrX2" Placeholder="Digite X2"/>
             <Entry x:Name="EntrY1" Placeholder="Digite Y1"/>
             <Entry x:Name="EntrY2" Placeholder="Digite Y2"/>
-            <Label x:Name="labelDistancia" />
+            <Label x:Name="labelDistancia" HorizontalTextAlignment="Center" FontSize="20"/>
 
             <Button
             x:Name="CalcularBtn"
@@ -30,20 +30,22 @@
                     <DataTemplate>
                         <ViewCell>
                             <VerticalStackLayout Padding="5">
-                                <Label Text="{Binding X1}" FontSize="17" FontAttributes="Bold"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding X2}"/>
-                                    <Label Grid.Column="2" Text="{Binding Y1}"/>
-                                    <Label Grid.Column="3" Text="{Binding Y2}"/>
-                                    <Label Grid.Column="5" Text="{Binding Distanciaa}" FontAttributes="Bold"/>
+                                    <Label Grid.Column="0" Text="{Binding X1}"/>
+                                    <Label Grid.Column="2" Text="{Binding X2}"/>
+                                    <Label Grid.Column="4" Text="{Binding Y1}"/>
+                                    <Label Grid.Column="6" Text="{Binding Y2}"/>
+                                    <Label Grid.Column="7" Text="{Binding Distanciaa}" FontAttributes="Bold"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

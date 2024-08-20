@@ -22,7 +22,12 @@ namespace MiCrud5834249
         public string? Y1 { get; set; }
         [Column("y2")]
         public string? Y2 { get; set; }
+
+       
+
         [Column("distanciaa")]
+
         public string? Distanciaa { get; set; }
+
     }
 }
